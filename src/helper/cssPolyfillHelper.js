@@ -86,18 +86,5 @@ export function cssPolyfiller() {
       .messenger-input:focus, .messenger-input:active {
         outline: none;
       }
-      .messenger-input::after {
-        content: "";
-        position: absolute;
-        top: 0;
-        right: -15px;
-        display: inline-block;
-        background-color: #606060;
-        vertical-align: top;
-        width: 10px;
-        height: 24px; 
-        -webkit-animation: blink 1s step-end infinite;
-        animation: blink 1s step-end infinite;
-      }
     `;
 }
