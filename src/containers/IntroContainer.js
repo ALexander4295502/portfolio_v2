@@ -9,42 +9,61 @@ export default class IntroContainer extends React.PureComponent {
           return (
             <div
               style={{
-                display: "flex",
-                flex: "1 0 50%",
+                ...styles.titleContainer,
                 padding: match ? "0 1rem" : "1rem 0"
               }}
             >
-              <h1
-                style={{
-                  margin: "auto",
-                  marginRight: 0,
-                  fontSize: 4 + "rem",
-                  letterSpacing: 2,
-                  color: "#F1FCEF",
-                  textShadow: "4px 2px 4px rgba(69, 105, 144, 0.2)",
-                }}
-              >
-                JOHN{" "}
-                <span role={"img"} aria-label="men">
-                  👱
-                </span>
-                <div
-                  style={{
-                    fontSize: 2 + "rem"
-                  }}
-                >
-                  The last friend <br />
-                  you'll <span style={styles.titleSpan}>e</span>
-                  <span style={styles.titleSpan}>v</span>
-                  <span style={styles.titleSpan}>e</span>
-                  <span style={styles.titleSpan}>r</span>
-                  <span style={styles.titleSpan}>&nbsp;</span>
-                  <span style={styles.titleSpan}>n</span>
-                  <span style={styles.titleSpan}>e</span>
-                  <span style={styles.titleSpan}>e</span>
-                  <span style={styles.titleSpan}>d</span>
-                </div>
-              </h1>
+              <link
+                rel="stylesheet"
+                href="https://use.fontawesome.com/releases/v5.2.0/css/all.css"
+                integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ"
+                crossOrigin="anonymous"
+              />
+              <div style={styles.scrollTextContainer}>
+                <p style={styles.staticText}>I am a</p>
+                <ul style={styles.scrollTextList}>
+                  <li style={styles.scrollTextItem}>coder</li>
+                  <li style={styles.scrollTextItem}>gamer</li>
+                  <li style={styles.scrollTextItem}>player</li>
+                </ul>
+              </div>
+              <div style={styles.scrollImageContainer}>
+                <p style={{ ...styles.staticText, lineHeight: 60 + "px" }}>
+                  of
+                </p>
+                <ul style={styles.scrollImageList}>
+                  <li style={styles.scrollImageItem}>
+                    <i
+                      style={styles.scrollImageItemIcon}
+                      className="fab fa-js-square"
+                    />
+                    <i
+                      style={styles.scrollImageItemIcon}
+                      className="fab fa-python"
+                    />
+                  </li>
+                  <li style={styles.scrollImageItem}>
+                    <i
+                      style={styles.scrollImageItemIcon}
+                      className="fab fa-nintendo-switch"
+                    />
+                    <i
+                      style={styles.scrollImageItemIcon}
+                      className="fab fa-steam"
+                    />
+                  </li>
+                  <li style={styles.scrollImageItem}>
+                    <i
+                      style={styles.scrollImageItemIcon}
+                      className="fab fa-js-square"
+                    />
+                    <i
+                      style={styles.scrollImageItemIcon}
+                      className="fab fa-python"
+                    />
+                  </li>
+                </ul>
+              </div>
             </div>
           );
         }}
@@ -54,8 +73,70 @@ export default class IntroContainer extends React.PureComponent {
 }
 
 const styles = {
-  titleSpan: {
-    display: "inline-block",
-    opacity: 1
+  titleContainer: {
+    display: "flex",
+    flex: "1 0 50%",
+    flexDirection: "row"
+  },
+  scrollTextContainer: {
+    height: 40,
+    overflow: "hidden",
+    margin: "auto",
+    marginRight: 0,
+    display: "block"
+  },
+  scrollImageContainer: {
+    height: 60,
+    overflow: "hidden",
+    margin: "auto",
+    marginRight: 0,
+    display: "block",
+    marginLeft: 15
+  },
+  staticText: {
+    float: "left",
+    display: "inline",
+    color: "#F1FCEF",
+    fontSize: 35,
+    height: 40,
+    margin: 0,
+    marginLeft: 0
+  },
+  scrollTextList: {
+    marginTop: 0,
+    paddingLeft: 120,
+    listStyle: "none",
+    WebkitAnimationName: "change",
+    WebkitAnimationDuration: "10s",
+    WebkitAnimationIterationCount: "infinite",
+    animationName: "change",
+    animationDuration: "10s",
+    animationIterationCount: "infinite"
+  },
+  scrollImageList: {
+    marginTop: 0,
+    listStyle: "none",
+    WebkitAnimationName: "change",
+    WebkitAnimationDuration: "10s",
+    WebkitAnimationIterationCount: "infinite",
+    animationName: "change",
+    animationDuration: "10s",
+    animationIterationCount: "infinite",
+    paddingLeft: 50
+  },
+  scrollImageItem: {
+    textAlign: "left",
+    color: "#F1FCEF",
+    fontSize: 50,
+    height: 60
+  },
+  scrollTextItem: {
+    textAlign: "left",
+    color: "#F1FCEF",
+    fontSize: 35,
+    height: 40
+  },
+  scrollImageItemIcon: {
+    marginRight: 15
   }
 };
