@@ -24,7 +24,7 @@ export default class IntroContainer extends React.PureComponent {
                 <ul style={styles.scrollTextList}>
                   <li style={styles.scrollTextItem}>coder</li>
                   <li style={styles.scrollTextItem}>gamer</li>
-                  <li style={styles.scrollTextItem}>player</li>
+                  <li style={styles.scrollTextItem}>fan</li>
                 </ul>
               </div>
               <div style={styles.scrollImageContainer}>
@@ -55,11 +55,11 @@ export default class IntroContainer extends React.PureComponent {
                   <li style={styles.scrollImageItem}>
                     <i
                       style={styles.scrollImageItemIcon}
-                      className="fab fa-js-square"
+                      className="fas fa-swimmer"
                     />
                     <i
                       style={styles.scrollImageItemIcon}
-                      className="fab fa-python"
+                      className="fas fa-film"
                     />
                   </li>
                 </ul>
