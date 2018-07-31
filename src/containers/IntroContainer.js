@@ -9,7 +9,7 @@ export default class IntroContainer extends React.PureComponent {
           return (
             <div
               style={{
-                ...styles.titleContainer,
+                ...styles.container,
                 padding: match ? "0 1rem" : "1rem 0"
               }}
             >
@@ -19,50 +19,58 @@ export default class IntroContainer extends React.PureComponent {
                 integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ"
                 crossOrigin="anonymous"
               />
-              <div style={styles.scrollTextContainer}>
-                <p style={styles.staticText}>I am a</p>
-                <ul style={styles.scrollTextList}>
-                  <li style={styles.scrollTextItem}>coder</li>
-                  <li style={styles.scrollTextItem}>gamer</li>
-                  <li style={styles.scrollTextItem}>fan</li>
-                </ul>
+              <div style={styles.titleContainer}>
+                <h1 style={{
+                  paddingRight: 20,
+                  color: '#F1FCEF'
+                }}>Hi, I'm Zheng</h1>
               </div>
-              <div style={styles.scrollImageContainer}>
-                <p style={{ ...styles.staticText, lineHeight: 60 + "px" }}>
-                  of
-                </p>
-                <ul style={styles.scrollImageList}>
-                  <li style={styles.scrollImageItem}>
-                    <i
-                      style={styles.scrollImageItemIcon}
-                      className="fab fa-js-square"
-                    />
-                    <i
-                      style={styles.scrollImageItemIcon}
-                      className="fab fa-python"
-                    />
-                  </li>
-                  <li style={styles.scrollImageItem}>
-                    <i
-                      style={styles.scrollImageItemIcon}
-                      className="fab fa-nintendo-switch"
-                    />
-                    <i
-                      style={styles.scrollImageItemIcon}
-                      className="fab fa-steam"
-                    />
-                  </li>
-                  <li style={styles.scrollImageItem}>
-                    <i
-                      style={styles.scrollImageItemIcon}
-                      className="fas fa-swimmer"
-                    />
-                    <i
-                      style={styles.scrollImageItemIcon}
-                      className="fas fa-film"
-                    />
-                  </li>
-                </ul>
+              <div style={styles.titleContainer}>
+                <div style={styles.scrollTextContainer}>
+                  <p style={styles.staticText}>I am a</p>
+                  <ul style={styles.scrollTextList}>
+                    <li style={styles.scrollTextItem}>coder</li>
+                    <li style={styles.scrollTextItem}>gamer</li>
+                    <li style={styles.scrollTextItem}>fan</li>
+                  </ul>
+                </div>
+                <div style={styles.scrollImageContainer}>
+                  <p style={{ ...styles.staticText, lineHeight: 60 + "px" }}>
+                    of
+                  </p>
+                  <ul style={styles.scrollImageList}>
+                    <li style={styles.scrollImageItem}>
+                      <i
+                        style={styles.scrollImageItemIcon}
+                        className="fab fa-js-square"
+                      />
+                      <i
+                        style={styles.scrollImageItemIcon}
+                        className="fab fa-python"
+                      />
+                    </li>
+                    <li style={styles.scrollImageItem}>
+                      <i
+                        style={styles.scrollImageItemIcon}
+                        className="fab fa-nintendo-switch"
+                      />
+                      <i
+                        style={styles.scrollImageItemIcon}
+                        className="fab fa-steam"
+                      />
+                    </li>
+                    <li style={styles.scrollImageItem}>
+                      <i
+                        style={styles.scrollImageItemIcon}
+                        className="fas fa-swimmer"
+                      />
+                      <i
+                        style={styles.scrollImageItemIcon}
+                        className="fas fa-film"
+                      />
+                    </li>
+                  </ul>
+                </div>
               </div>
             </div>
           );
@@ -73,9 +81,15 @@ export default class IntroContainer extends React.PureComponent {
 }
 
 const styles = {
-  titleContainer: {
+  container: {
     display: "flex",
     flex: "1 0 50%",
+    flexDirection: 'column',
+    alignItems: 'flex-end',
+    justifyContent: 'center',
+  },
+  titleContainer: {
+    display: 'flex',
     flexDirection: "row"
   },
   scrollTextContainer: {
@@ -127,7 +141,7 @@ const styles = {
   scrollImageItem: {
     textAlign: "left",
     color: "#F1FCEF",
-    fontSize: 50,
+    fontSize: 60,
     height: 60
   },
   scrollTextItem: {

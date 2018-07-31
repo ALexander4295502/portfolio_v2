@@ -7,12 +7,12 @@ export default class MessengerBody extends React.PureComponent {
       <div style={styles.container} className={"messenger-body"}>
         <div style={styles.messagesContainer}>
           <ul style={styles.messagesList}>
-            <MessengerRow />
-            <MessengerRow />
-            <MessengerRow />
-            <MessengerRow />
-            <MessengerRow />
-            <MessengerRow />
+            <MessengerRow fromUser={false}/>
+            <MessengerRow fromUser={true}/>
+            <MessengerRow fromUser={true}/>
+            <MessengerRow fromUser={true}/>
+            <MessengerRow fromUser={true}/>
+            <MessengerRow fromUser={true}/>
           </ul>
         </div>
       </div>
@@ -22,7 +22,7 @@ export default class MessengerBody extends React.PureComponent {
 
 const styles = {
   container: {
-    borderTop: "4px solid #114B5F",
+    borderTop: "4px solid #F1FCEF",
     padding: 0,
     position: "relative",
     WebkitAnimation:

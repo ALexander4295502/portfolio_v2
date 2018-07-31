@@ -1,11 +1,38 @@
 import React from "react";
 
 export default class MessengerFooter extends React.PureComponent {
+  constructor() {
+    super();
+    this.state = {
+      value: ""
+    };
+  }
+
+  handleInput = e => {
+    this.setState({
+      value: e.target.value
+    });
+  };
+
+  submitHandler = _ => {
+    console.log(this.state.value);
+  };
+
   render() {
     return (
       <div style={styles.container} className={"messenger-footer"}>
-        <input placeholder={"Enter text here"} style={styles.input} className={"messenger-input"} />
-        <button style={styles.submit} className={"messenger-submit"} />
+        <input
+          placeholder={"Enter text here"}
+          style={styles.input}
+          className={"messenger-input"}
+          value={this.state.value}
+          onChange={this.handleInput}
+        />
+        <button
+          style={styles.submit}
+          className={"messenger-submit"}
+          onClick={this.submitHandler}
+        />
       </div>
     );
   }
@@ -14,7 +41,7 @@ export default class MessengerFooter extends React.PureComponent {
 const styles = {
   container: {
     height: 6 + "rem",
-    border: "4px solid #114B5F",
+    border: "4px solid #F1FCEF",
     borderTop: 0,
     opacity: 0,
     borderRadius: "0 0 12px 12px",
@@ -28,12 +55,12 @@ const styles = {
     width: "100%",
     height: "100%",
     resize: "none",
-    backgroundColor: "rgba(241, 252, 239, 0.3)",
+    backgroundColor: "transparent",
     marginTop: 4,
     border: 0,
     borderRadius: "0 0 12px 12px",
     padding: "1rem 5rem 1rem 1rem",
-    color: "#114B5F",
+    color: "#F1FCEF",
     fontSize: 20
   },
   submit: {
@@ -45,6 +72,7 @@ const styles = {
     position: "absolute",
     right: "1rem",
     top: "calc(50% - 1.5rem)",
-    boxShadow: "4px 4px #6B2737"
-  }
+    boxShadow: "4px 4px #6B2737",
+    cursor: 'pointer',
+}
 };

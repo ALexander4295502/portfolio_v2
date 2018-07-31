@@ -5,13 +5,12 @@ import IntroContainer from "./IntroContainer";
 import { injectGoogleFonts } from "../helper/fonts";
 import ChatBoxContainer from "./ChatBoxContainer";
 import { injectAnimationFrames } from "../helper/animationKeyframes";
-import { cssPolyfiller } from "../helper/cssPolyfillHelper";
+import "../static/main.css";
 
 export default class HomePage extends React.PureComponent {
   injectHelper() {
     injectGoogleFonts();
     injectAnimationFrames();
-    cssPolyfiller();
   }
 
   render() {
@@ -49,7 +48,11 @@ const styles = {
     minHeight: 100 + "vh",
     position: "relative",
     background:
-      "linear-gradient(45deg, #43C6AC, #F8FFAE) center/cover no-repeat"
+      "radial-gradient( circle farthest-corner at 10% 20%, rgba(69,86,102,1) 0%, rgba(34,34,34,1) 90% )",
+    backgroundSize: "400% 400%",
+    WebkitAnimation: "Gradient 15s ease infinite",
+    MozAnimation: "Gradient 15s ease infinite",
+    animation: "Gradient 15s ease infinite"
   },
   container: {
     width: "100%",

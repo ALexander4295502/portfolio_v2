@@ -1,9 +1,14 @@
 import React from "react";
+import PropTypes from "prop-types";
 
 export default class MessengerRow extends React.PureComponent {
   render() {
+    const styleModifier = this.props.fromUser
+      ? styles.fromUserContainerModifier
+      : styles.fromRobotContainerModifier;
+
     return (
-      <li style={styles.container}>
+      <li style={{ ...styles.container, ...styleModifier }}>
         <div style={styles.time}>1:30pm</div>
         <div style={styles.content}>Hey I'm your text door neighbor</div>
       </li>
@@ -11,22 +16,35 @@ export default class MessengerRow extends React.PureComponent {
   }
 }
 
+MessengerRow.propTypes = {
+  fromUser: PropTypes.bool
+};
+
 const styles = {
   container: {
-    marginLeft: "auto",
     borderRadius: 12,
     padding: 1 + "rem",
     marginTop: 1 + "rem",
     display: "inline-block",
-    backgroundColor: "#456990",
-    color: "#F1FCEF",
     opacity: 0,
     maxWidth: "80%",
-    WebkitAnimation: 'pop 0.5s cubic-bezier(0.36, -0.04, 0.15, 1.64) forwards',
-    animations: 'pop 0.5s cubic-bezier(0.36, -0.04, 0.15, 1.64) forwards',
-    willChange: 'transform',
-    WebkitTransformOrigin: 'top right',
-    transformOrigin: 'top right',
+    WebkitAnimation: "pop 0.5s cubic-bezier(0.36, -0.04, 0.15, 1.64) forwards",
+    animations: "pop 0.5s cubic-bezier(0.36, -0.04, 0.15, 1.64) forwards",
+    willChange: "transform"
+  },
+  fromUserContainerModifier: {
+    marginLeft: "auto",
+    WebkitTransformOrigin: "top right",
+    transformOrigin: "top right",
+    backgroundColor: "#FFF",
+    color: "#000"
+  },
+  fromRobotContainerModifier: {
+    marginRight: "auto",
+    WebkitTransformOrigin: "top left",
+    transformOrigin: "top left",
+    backgroundColor: "#456990",
+    color: "#F1FCEF"
   },
   time: {
     fontSize: 0.65 + "rem"
