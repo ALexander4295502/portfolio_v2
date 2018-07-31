@@ -18,7 +18,8 @@ export default class IntroContainer extends React.PureComponent {
             <div
               style={{
                 ...styles.container,
-                padding: match ? "0 1rem" : "1rem 0"
+                padding: match ? "0 1rem" : "1rem 0",
+                alignItems: match ? 'flex-end' : 'center',
               }}
             >
               <link
@@ -30,7 +31,7 @@ export default class IntroContainer extends React.PureComponent {
               <div style={styles.titleContainer}>
                 <h1
                   style={{
-                    paddingRight: match ? 20 : 15,
+                    paddingRight: match ? 20 : 0,
                     color: "#F1FCEF",
                     fontSize: match ? 35 : 17,
                     height: match ? 40 : 20
@@ -43,7 +44,8 @@ export default class IntroContainer extends React.PureComponent {
                 <div
                   style={{
                     ...styles.scrollTextContainer,
-                    height: match ? 40 : 20
+                    height: match ? 40 : 20,
+                    textAlign: match ? undefined : 'center',
                   }}
                 >
                   <p
@@ -61,9 +63,10 @@ export default class IntroContainer extends React.PureComponent {
                       paddingLeft: match ? 120 : 60
                     }}
                   >
-                    {roleNames.map(roleName => {
+                    {roleNames.map((roleName, id) => {
                       return (
                         <li
+                          key={id}
                           style={{
                             ...styles.scrollTextItem,
                             fontSize: match ? 35 : 17,
@@ -99,9 +102,10 @@ export default class IntroContainer extends React.PureComponent {
                       paddingLeft: match ? 50 : 30
                     }}
                   >
-                    {iconNames.map(iconName => {
+                    {iconNames.map((iconName, id) => {
                       return (
                         <li
+                          key={id}
                           style={{
                             ...styles.scrollImageItem,
                             fontSize: match ? 60 : 30,
@@ -122,6 +126,22 @@ export default class IntroContainer extends React.PureComponent {
                   </ul>
                 </div>
               </div>
+              <div style={styles.titleContainer}>
+                <h1
+                  style={{
+                    paddingRight: match ? 20 : 0,
+                    color: "#F1FCEF",
+                    fontSize: match ? 35 : 17,
+                    height: match ? 40 : 20,
+                    textAlign: match ? "right" : 'center',
+                  }}
+                >
+                  Have questions? I am happy to help{" "}
+                  <span role={"img"} aria-label={"hand"}>
+                    { match ? '👉' : '👇'}
+                  </span>
+                </h1>
+              </div>
             </div>
           );
         }}
@@ -135,7 +155,6 @@ const styles = {
     display: "flex",
     flex: "1 0 50%",
     flexDirection: "column",
-    alignItems: "flex-end",
     justifyContent: "center"
   },
   titleContainer: {
