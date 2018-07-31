@@ -3,6 +3,14 @@ import MediaQuery from "react-responsive";
 
 export default class IntroContainer extends React.PureComponent {
   render() {
+    const roleNames = ["coder", "gamer", "fan"];
+
+    const iconNames = [
+      ["fab fa-js-square", "fab fa-python"],
+      ["fab fa-steam", "fab fa-nintendo-switch"],
+      ["fas fa-swimmer", "fas fa-film"]
+    ];
+
     return (
       <MediaQuery minWidth={1000}>
         {match => {
@@ -20,55 +28,97 @@ export default class IntroContainer extends React.PureComponent {
                 crossOrigin="anonymous"
               />
               <div style={styles.titleContainer}>
-                <h1 style={{
-                  paddingRight: 20,
-                  color: '#F1FCEF'
-                }}>Hi, I'm Zheng</h1>
+                <h1
+                  style={{
+                    paddingRight: match ? 20 : 15,
+                    color: "#F1FCEF",
+                    fontSize: match ? 35 : 17,
+                    height: match ? 40 : 20
+                  }}
+                >
+                  Hi, I'm Zheng
+                </h1>
               </div>
               <div style={styles.titleContainer}>
-                <div style={styles.scrollTextContainer}>
-                  <p style={styles.staticText}>I am a</p>
-                  <ul style={styles.scrollTextList}>
-                    <li style={styles.scrollTextItem}>coder</li>
-                    <li style={styles.scrollTextItem}>gamer</li>
-                    <li style={styles.scrollTextItem}>fan</li>
+                <div
+                  style={{
+                    ...styles.scrollTextContainer,
+                    height: match ? 40 : 20
+                  }}
+                >
+                  <p
+                    style={{
+                      ...styles.staticText,
+                      fontSize: match ? 35 : 17,
+                      height: match ? 40 : 20
+                    }}
+                  >
+                    I am a
+                  </p>
+                  <ul
+                    style={{
+                      ...styles.scrollTextList,
+                      paddingLeft: match ? 120 : 60
+                    }}
+                  >
+                    {roleNames.map(roleName => {
+                      return (
+                        <li
+                          style={{
+                            ...styles.scrollTextItem,
+                            fontSize: match ? 35 : 17,
+                            height: match ? 40 : 20
+                          }}
+                        >
+                          {roleName}
+                        </li>
+                      );
+                    })}
                   </ul>
                 </div>
-                <div style={styles.scrollImageContainer}>
-                  <p style={{ ...styles.staticText, lineHeight: 60 + "px" }}>
+                <div
+                  style={{
+                    ...styles.scrollImageContainer,
+                    height: match ? 60 : 30,
+                    marginLeft: match ? 15 : 7
+                  }}
+                >
+                  <p
+                    style={{
+                      ...styles.staticText,
+                      lineHeight: (match ? 60 : 30) + "px",
+                      fontSize: match ? 35 : 17,
+                      height: match ? 40 : 20
+                    }}
+                  >
                     of
                   </p>
-                  <ul style={styles.scrollImageList}>
-                    <li style={styles.scrollImageItem}>
-                      <i
-                        style={styles.scrollImageItemIcon}
-                        className="fab fa-js-square"
-                      />
-                      <i
-                        style={styles.scrollImageItemIcon}
-                        className="fab fa-python"
-                      />
-                    </li>
-                    <li style={styles.scrollImageItem}>
-                      <i
-                        style={styles.scrollImageItemIcon}
-                        className="fab fa-nintendo-switch"
-                      />
-                      <i
-                        style={styles.scrollImageItemIcon}
-                        className="fab fa-steam"
-                      />
-                    </li>
-                    <li style={styles.scrollImageItem}>
-                      <i
-                        style={styles.scrollImageItemIcon}
-                        className="fas fa-swimmer"
-                      />
-                      <i
-                        style={styles.scrollImageItemIcon}
-                        className="fas fa-film"
-                      />
-                    </li>
+                  <ul
+                    style={{
+                      ...styles.scrollImageList,
+                      paddingLeft: match ? 50 : 30
+                    }}
+                  >
+                    {iconNames.map(iconName => {
+                      return (
+                        <li
+                          style={{
+                            ...styles.scrollImageItem,
+                            fontSize: match ? 60 : 30,
+                            height: match ? 60 : 30
+                          }}
+                        >
+                          <i
+                            style={styles.scrollImageItemIcon}
+                            className={iconName[0]}
+                          />
+                          <i
+                            style={styles.scrollImageItemIcon}
+                            className={iconName[1]}
+                          />
+                        </li>
+                      );
+                    })}
                   </ul>
                 </div>
               </div>
@@ -84,41 +134,35 @@ const styles = {
   container: {
     display: "flex",
     flex: "1 0 50%",
-    flexDirection: 'column',
-    alignItems: 'flex-end',
-    justifyContent: 'center',
+    flexDirection: "column",
+    alignItems: "flex-end",
+    justifyContent: "center"
   },
   titleContainer: {
-    display: 'flex',
+    display: "flex",
     flexDirection: "row"
   },
   scrollTextContainer: {
-    height: 40,
     overflow: "hidden",
     margin: "auto",
     marginRight: 0,
     display: "block"
   },
   scrollImageContainer: {
-    height: 60,
     overflow: "hidden",
     margin: "auto",
     marginRight: 0,
-    display: "block",
-    marginLeft: 15
+    display: "block"
   },
   staticText: {
     float: "left",
     display: "inline",
     color: "#F1FCEF",
-    fontSize: 35,
-    height: 40,
     margin: 0,
     marginLeft: 0
   },
   scrollTextList: {
     marginTop: 0,
-    paddingLeft: 120,
     listStyle: "none",
     WebkitAnimationName: "change",
     WebkitAnimationDuration: "10s",
@@ -135,20 +179,15 @@ const styles = {
     WebkitAnimationIterationCount: "infinite",
     animationName: "change",
     animationDuration: "10s",
-    animationIterationCount: "infinite",
-    paddingLeft: 50
+    animationIterationCount: "infinite"
   },
   scrollImageItem: {
     textAlign: "left",
-    color: "#F1FCEF",
-    fontSize: 60,
-    height: 60
+    color: "#F1FCEF"
   },
   scrollTextItem: {
     textAlign: "left",
-    color: "#F1FCEF",
-    fontSize: 35,
-    height: 40
+    color: "#F1FCEF"
   },
   scrollImageItemIcon: {
     marginRight: 15
