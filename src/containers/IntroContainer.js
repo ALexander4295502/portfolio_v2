@@ -136,7 +136,7 @@ export default class IntroContainer extends React.PureComponent {
                     textAlign: match ? "right" : 'center',
                   }}
                 >
-                  Have questions? I am happy to help{" "}
+                  Have questions? I'm happy to help{" "}
                   <span role={"img"} aria-label={"hand"}>
                     { match ? '👉' : '👇'}
                   </span>
