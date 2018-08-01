@@ -1,4 +1,5 @@
 import React from "react";
+import moment from "moment";
 import PropTypes from "prop-types";
 
 export default class MessengerRow extends React.PureComponent {
@@ -9,15 +10,19 @@ export default class MessengerRow extends React.PureComponent {
 
     return (
       <li style={{ ...styles.container, ...styleModifier }}>
-        <div style={styles.time}>1:30pm</div>
-        <div style={styles.content}>Hey I'm your text door neighbor</div>
+        <div style={styles.time}>
+          {moment(this.props.timestamp).format("h:mm:ss a")}
+        </div>
+        <div style={styles.content}>{this.props.content}</div>
       </li>
     );
   }
 }
 
 MessengerRow.propTypes = {
-  fromUser: PropTypes.bool
+  fromUser: PropTypes.bool,
+  content: PropTypes.string,
+  timestamp: PropTypes.string
 };
 
 const styles = {

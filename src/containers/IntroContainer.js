@@ -19,7 +19,7 @@ export default class IntroContainer extends React.PureComponent {
               style={{
                 ...styles.container,
                 padding: match ? "0 1rem" : "1rem 0",
-                alignItems: match ? 'flex-end' : 'center',
+                alignItems: match ? "flex-end" : "center"
               }}
             >
               <link
@@ -45,7 +45,7 @@ export default class IntroContainer extends React.PureComponent {
                   style={{
                     ...styles.scrollTextContainer,
                     height: match ? 40 : 20,
-                    textAlign: match ? undefined : 'center',
+                    textAlign: match ? undefined : "center"
                   }}
                 >
                   <p
@@ -133,12 +133,12 @@ export default class IntroContainer extends React.PureComponent {
                     color: "#F1FCEF",
                     fontSize: match ? 35 : 17,
                     height: match ? 40 : 20,
-                    textAlign: match ? "right" : 'center',
+                    textAlign: match ? "right" : "center"
                   }}
                 >
                   Have questions? I'm happy to help{" "}
                   <span role={"img"} aria-label={"hand"}>
-                    { match ? '👉' : '👇'}
+                    {match ? "👉" : "👇"}
                   </span>
                 </h1>
               </div>

@@ -322,5 +322,29 @@ export function injectAnimationFrames() {
           background-position: 0 50%
       }
     }
+    
+    @-webkit-keyframes blink-slow {
+      50% {
+        opacity: 1;
+      }
+    }
+    
+    @keyframes blink-slow {
+      50% {
+        opacity: 1;
+      }
+    }
+    @-webkit-keyframes bulge {
+      50% {
+        -webkit-transform: scale(1.05);
+                transform: scale(1.05);
+      }
+    }
+    @keyframes bulge {
+      50% {
+        -webkit-transform: scale(1.05);
+                transform: scale(1.05);
+      }
+    }
   `;
 }

@@ -1,10 +1,15 @@
 import React from "react";
+import PropTypes from "prop-types";
 
 export default class MessengerHeader extends React.PureComponent {
   render() {
     return <div style={styles.container} />;
   }
 }
+
+MessengerHeader.propsType = {
+  clearMessages: PropTypes.func.isRequired
+};
 
 const styles = {
   container: {

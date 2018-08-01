@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from "prop-types";
 
 export default class MessengerFooter extends React.PureComponent {
   constructor() {
@@ -14,8 +15,13 @@ export default class MessengerFooter extends React.PureComponent {
     });
   };
 
-  submitHandler = _ => {
-    console.log(this.state.value);
+  submitHandler = () => {
+    if (this.state.value) {
+      this.props.createMessage(this.state.value, true);
+      this.setState({
+        value: ""
+      });
+    }
   };
 
   render() {
@@ -37,6 +43,10 @@ export default class MessengerFooter extends React.PureComponent {
     );
   }
 }
+
+MessengerFooter.propsType = {
+  createMessage: PropTypes.func.isRequired
+};
 
 const styles = {
   container: {
@@ -73,6 +83,6 @@ const styles = {
     right: "1rem",
     top: "calc(50% - 1.5rem)",
     boxShadow: "4px 4px #6B2737",
-    cursor: 'pointer',
-}
+    cursor: "pointer"
+  }
 };

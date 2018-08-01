@@ -1,8 +1,21 @@
 import React from "react";
 import MediaQuery from "react-responsive";
+import { bindActionCreators } from "redux";
+import { connect } from "react-redux";
+import { PropTypes } from "prop-types";
+
+import * as MessagesActions from "../actions/messages";
 import MessengerBox from "../components/Messenger/MessengerBox";
 
-export default class ChatBoxContainer extends React.PureComponent {
+export class ChatBoxContainer extends React.PureComponent {
+  createMessage = (content, fromUser) => {
+    this.props.actions.createMessages(content, fromUser);
+  };
+
+  clearMessages = () => {
+    this.props.actions.clearMessages();
+  };
+
   render() {
     return (
       <MediaQuery minWidth={1000}>
@@ -14,7 +27,12 @@ export default class ChatBoxContainer extends React.PureComponent {
                 padding: match ? "0 1rem" : "1rem 0"
               }}
             >
-              <MessengerBox />
+              <MessengerBox
+                messages={this.props.messages}
+                pendingResponseNum={this.props.pendingResponseNum}
+                createMessage={this.createMessage}
+                clearMessages={this.clearMessages}
+              />
             </div>
           );
         }}
@@ -23,9 +41,33 @@ export default class ChatBoxContainer extends React.PureComponent {
   }
 }
 
+ChatBoxContainer.propTypes = {
+  actions: PropTypes.object.isRequired,
+  messages: PropTypes.array.isRequired,
+  pendingResponseNum: PropTypes.number.isRequired
+};
+
+function mapStateToProps(state, ownProps) {
+  return {
+    messages: state.messages,
+    pendingResponseNum: state.pendingResponseNum
+  };
+}
+
+function mapDispatchToProps(dispatch) {
+  return {
+    actions: bindActionCreators(MessagesActions, dispatch)
+  };
+}
+
+export default connect(
+  mapStateToProps,
+  mapDispatchToProps
+)(ChatBoxContainer);
+
 const styles = {
   containerRight: {
     display: "flex",
-    flex: "1 0 50%",
+    flex: "1 0 50%"
   }
 };
