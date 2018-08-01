@@ -1,6 +1,7 @@
 import React from "react";
 import moment from "moment";
 import PropTypes from "prop-types";
+import ReactMarkdown from "react-markdown";
 
 export default class MessengerRow extends React.PureComponent {
   render() {
@@ -13,7 +14,18 @@ export default class MessengerRow extends React.PureComponent {
         <div style={styles.time}>
           {moment(this.props.timestamp).format("h:mm:ss a")}
         </div>
-        <div style={styles.content}>{this.props.content}</div>
+        <div style={styles.content}>
+          <ReactMarkdown
+            source={this.props.content}
+            renderers={{
+              link: props => (
+                <a href={props.href} target="_blank">
+                  {props.children}
+                </a>
+              )
+            }}
+          />
+        </div>
       </li>
     );
   }
