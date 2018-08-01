@@ -2,21 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="cdbc5802-f9dd-4054-a413-defbd804f513" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.test.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.test.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Messenger/MessengerBody.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Messenger/MessengerList.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Messenger/MessengerBox.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Messenger/MessengerBox.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Messenger/MessengerFooter.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Messenger/MessengerFooter.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Messenger/MessengerHeader.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Messenger/MessengerHeader.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Messenger/MessengerRow.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Messenger/MessengerRow.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/actions/messages.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/actions/messages.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/api/messageApi.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/api/messageApi.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Messenger/MessengerList.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Messenger/MessengerList.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/containers/ChatBoxContainer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/containers/ChatBoxContainer.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/containers/IntroContainer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/containers/IntroContainer.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/helper/animationKeyframes.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/helper/animationKeyframes.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/registerServiceWorker.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/registerServiceWorker.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/static/main.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/static/main.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/store/configureStore.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/configureStore.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
@@ -31,23 +22,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="messages.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/reducers/messages.js">
+      <file leaf-file-name="HomePageContainer.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/containers/HomePageContainer.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="272">
-              <caret line="16" column="9" lean-forward="true" selection-start-line="16" selection-start-column="9" selection-end-line="16" selection-end-column="9" />
-              <folding>
-                <element signature="e#0#92#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="IntroContainer.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/containers/IntroContainer.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="182">
-              <caret line="138" column="36" selection-start-line="138" selection-start-column="36" selection-end-line="138" selection-end-column="36" />
+            <state relative-caret-position="136">
+              <caret line="8" lean-forward="true" selection-start-line="8" selection-end-line="8" />
               <folding>
                 <element signature="e#0#26#0" expanded="true" />
               </folding>
@@ -58,8 +37,8 @@
       <file leaf-file-name="ChatBoxContainer.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/containers/ChatBoxContainer.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="247">
-              <caret line="45" column="39" lean-forward="true" selection-start-line="45" selection-start-column="39" selection-end-line="45" selection-end-column="39" />
+            <state relative-caret-position="986">
+              <caret line="58" column="28" selection-start-line="58" selection-start-column="28" selection-end-line="58" selection-end-column="28" />
               <folding>
                 <element signature="e#0#26#0" expanded="true" />
               </folding>
@@ -67,11 +46,56 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="MessengerBox.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/components/Messenger/MessengerBox.js">
+      <file leaf-file-name="messages.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/actions/messages.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="204">
-              <caret line="12" column="18" lean-forward="true" selection-start-line="12" selection-start-column="18" selection-end-line="12" selection-end-column="18" />
+            <state relative-caret-position="68">
+              <caret line="18" column="14" lean-forward="true" selection-start-line="18" selection-start-column="14" selection-end-line="18" selection-end-column="14" />
+              <folding>
+                <element signature="e#0#29#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="messages.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/reducers/messages.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="187">
+              <caret line="15" column="37" lean-forward="true" selection-start-line="15" selection-start-column="37" selection-end-line="15" selection-end-column="37" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="messageApi.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/api/messageApi.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="102">
+              <caret line="6" column="50" selection-start-line="6" selection-start-column="50" selection-end-line="6" selection-end-column="50" />
+              <folding>
+                <element signature="e#0#26#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="MessengerHeader.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/components/Messenger/MessengerHeader.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="255">
+              <caret line="15" column="22" lean-forward="true" selection-start-line="15" selection-start-column="22" selection-end-line="15" selection-end-column="22" />
+              <folding>
+                <element signature="e#0#26#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="MessengerFooter.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/components/Messenger/MessengerFooter.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="340">
+              <caret line="20" column="21" lean-forward="true" selection-start-line="20" selection-start-column="21" selection-end-line="20" selection-end-column="21" />
               <folding>
                 <element signature="e#0#26#0" expanded="true" />
               </folding>
@@ -82,8 +106,8 @@
       <file leaf-file-name="MessengerList.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/components/Messenger/MessengerList.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="333">
-              <caret line="31" column="34" lean-forward="true" selection-start-line="31" selection-start-column="34" selection-end-line="31" selection-end-column="34" />
+            <state relative-caret-position="255">
+              <caret line="15" selection-start-line="15" selection-end-line="15" />
               <folding>
                 <element signature="e#0#26#0" expanded="true" />
               </folding>
@@ -94,20 +118,11 @@
       <file leaf-file-name="MessengerRow.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/components/Messenger/MessengerRow.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="187">
-              <caret line="11" column="6" lean-forward="true" selection-start-line="11" selection-start-column="6" selection-end-line="16" selection-end-column="11" />
+            <state relative-caret-position="340">
+              <caret line="20" lean-forward="true" selection-start-line="20" selection-end-line="20" />
               <folding>
                 <element signature="e#0#26#0" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="main.css" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/static/main.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="272">
-              <caret line="88" lean-forward="true" selection-start-line="88" selection-end-line="88" />
             </state>
           </provider>
         </entry>
@@ -117,24 +132,6 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="374">
               <caret line="22" column="15" lean-forward="true" selection-start-line="22" selection-start-column="15" selection-end-line="22" selection-end-column="15" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="animationKeyframes.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/helper/animationKeyframes.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="636">
-              <caret line="342" column="22" lean-forward="true" selection-start-line="342" selection-start-column="22" selection-end-line="342" selection-end-column="22" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="settings.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/helper/settings.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="51">
-              <caret line="3" lean-forward="true" selection-start-line="3" selection-end-line="3" />
             </state>
           </provider>
         </entry>
@@ -208,18 +205,18 @@
         <option value="$PROJECT_DIR$/src/components/Messenger/MessengerHeader.js" />
         <option value="$PROJECT_DIR$/src/components/Messenger/MessengerRow.js" />
         <option value="$PROJECT_DIR$/src/index.js" />
-        <option value="$PROJECT_DIR$/src/api/messageApi.js" />
         <option value="$PROJECT_DIR$/src/components/Messenger/MessengerFooter.js" />
-        <option value="$PROJECT_DIR$/src/actions/messages.js" />
         <option value="$PROJECT_DIR$/src/reducers/messages.js" />
         <option value="$PROJECT_DIR$/src/reducers/pendingResponse.js" />
         <option value="$PROJECT_DIR$/src/reducers/index.js" />
-        <option value="$PROJECT_DIR$/src/store/configureStore.js" />
         <option value="$PROJECT_DIR$/src/components/Messenger/MessengerBox.js" />
-        <option value="$PROJECT_DIR$/src/containers/ChatBoxContainer.js" />
         <option value="$PROJECT_DIR$/src/helper/animationKeyframes.js" />
         <option value="$PROJECT_DIR$/src/static/main.css" />
         <option value="$PROJECT_DIR$/src/components/Messenger/MessengerPendingIndicator.js" />
+        <option value="$PROJECT_DIR$/src/store/configureStore.js" />
+        <option value="$PROJECT_DIR$/src/containers/ChatBoxContainer.js" />
+        <option value="$PROJECT_DIR$/src/api/messageApi.js" />
+        <option value="$PROJECT_DIR$/src/actions/messages.js" />
         <option value="$PROJECT_DIR$/src/components/Messenger/MessengerList.js" />
       </list>
     </option>
@@ -357,7 +354,7 @@
   </component>
   <component name="PropertiesComponent">
     <property name="JavaScriptWeakerCompletionTypeGuess" value="true" />
-    <property name="SearchEverywhereHistoryKey" value="reducer&#9;FILE&#9;file:///Users/zheng/Documents/Web/React/portfolio_v2.0/src/reducers&#10;createmess&#9;null&#9;null&#10;index&#9;FILE&#9;file:///Users/zheng/Documents/Web/React/portfolio_v2.0/src/index.js&#10;messa&#9;FILE&#9;file:///Users/zheng/Documents/Web/React/portfolio_v2.0/src/reducers/messages.js&#10;actions/inde&#9;FILE&#9;file:///Users/zheng/Documents/Web/React/portfolio_v2.0/src/components/actions/index.js&#10;message&#9;FILE&#9;file:///Users/zheng/Documents/Web/React/portfolio_v2.0/src/reducers/messages.js&#10;reduce&#9;FILE&#9;file:///Users/zheng/Documents/Web/React/portfolio_v2.0/src/reducers&#10;action/inde&#9;FILE&#9;file:///Users/zheng/Documents/Web/React/portfolio_v2.0/src/components/actions/index.js&#10;inde&#9;FILE&#9;file:///Users/zheng/Documents/Web/React/portfolio_v2.0/src/index.js&#10;app&#9;FILE&#9;file:///Users/zheng/Documents/Web/React/portfolio_v2.0/src/App.js&#10;homepage&#9;FILE&#9;file:///Users/zheng/Documents/Web/React/portfolio_v2.0/src/containers/HomePageContainer.js&#10;favico&#9;FILE&#9;file:///Users/zheng/Documents/Web/React/portfolio_v2.0/public/favicon.ico&#10;intro&#9;FILE&#9;file:///Users/zheng/Documents/Web/React/portfolio_v2.0/src/containers/IntroContainer.js&#10;intr&#9;FILE&#9;file:///Users/zheng/Documents/Web/React/portfolio_v2.0/src/containers/IntroContainer.js&#10;bod&#9;FILE&#9;file:///Users/zheng/Documents/Web/React/portfolio_v2.0/src/components/Messenger/MessengerBody.js&#10;footer&#9;FILE&#9;file:///Users/zheng/Documents/Web/React/portfolio_v2.0/src/components/Messenger/MessengerFooter.js&#10;row&#9;FILE&#9;file:///Users/zheng/Documents/Web/React/portfolio_v2.0/src/components/Messenger/MessengerRow.js&#10;messen&#9;FILE&#9;file:///Users/zheng/Documents/Web/React/portfolio_v2.0/src/components/Messenger/MessengerBody.js&#10;in&#9;FILE&#9;file:///Users/zheng/Documents/Web/React/portfolio_v2.0/src/containers/IntroContainer.js&#10;INTROC&#9;FILE&#9;file:///Users/zheng/Documents/Web/React/portfolio_v2.0/src/containers/IntroContainer.js&#10;css&#9;FILE&#9;file:///Users/zheng/Documents/Web/React/portfolio_v2.0/src/helper/cssPolyfillHelper.js&#10;foot&#9;FILE&#9;file:///Users/zheng/Documents/Web/React/portfolio_v2.0/src/components/Messenger/MessengerFooter.js&#10;FOOTER&#9;FILE&#9;file:///Users/zheng/Documents/Web/React/portfolio_v2.0/src/components/Messenger/MessengerFooter.js&#10;header&#9;FILE&#9;file:///Users/zheng/Documents/Web/React/portfolio_v2.0/src/components/Messenger/MessengerHeader.js&#10;container&#9;null&#9;null&#10;containerRig&#9;null&#9;null&#10;fonts&#9;FILE&#9;file:///Users/zheng/Documents/Web/React/portfolio_v2.0/src/helper/fonts.js&#10;containerRigh&#9;null&#9;null&#10;home&#9;FILE&#9;file:///Users/zheng/Documents/Web/React/portfolio_v2.0/src/containers/HomePageContainer.js&#10;chat&#9;FILE&#9;file:///Users/zheng/Documents/Web/React/portfolio_v2.0/src/containers/ChatBoxContainer.js&#10;box&#9;FILE&#9;file:///Users/zheng/Documents/Web/React/portfolio_v2.0/src/components/Messenger/MessengerBox.js&#10;Home&#9;FILE&#9;file:///Users/zheng/Documents/Web/React/portfolio_v2.0/src/containers/HomePageContainer.js&#10;HomeP&#9;FILE&#9;file:///Users/zheng/Documents/Web/React/portfolio_v2.0/src/containers/HomePageContainer.js&#10;messengerfoot&#9;FILE&#9;file:///Users/zheng/Documents/Web/React/portfolio_v2.0/src/components/MessengerFooter.js&#10;chatbo&#9;FILE&#9;file:///Users/zheng/Documents/Web/React/portfolio_v2.0/src/containers/ChatBoxContainer.js&#10;fon&#9;FILE&#9;file:///Users/zheng/Documents/Web/React/portfolio_v2.0/src/helper/fonts.js&#10;cha&#9;FILE&#9;file:///Users/zheng/Documents/Web/React/portfolio_v2.0/src/containers/ChatBoxContainer.js&#10;int&#9;FILE&#9;file:///Users/zheng/Documents/Web/React/portfolio_v2.0/src/containers/IntroContainer.js&#10;homepa&#9;FILE&#9;file:///Users/zheng/Documents/Web/React/portfolio_v2.0/src/containers/HomePageContainer.js&#10;app.js&#9;FILE&#9;file:///Users/zheng/Documents/Web/React/portfolio_v2.0/src/App.js&#10;HomePa&#9;FILE&#9;file:///Users/zheng/Documents/Web/React/portfolio_v2.0/src/container/HomePage&#10;packa&#9;FILE&#9;file:///Users/zheng/Documents/Web/React/portfolio_v2.0/package.json&#10;CONTA&#9;FILE&#9;file:///Users/zheng/Documents/Web/React/portfolio_v2.0/src/container&#10;src&#9;FILE&#9;file:///Users/zheng/Documents/Web/React/portfolio_v2.0/src&#10;pub&#9;FILE&#9;file:///Users/zheng/Documents/Web/React/portfolio_v2.0/public&#10;App.js&#9;FILE&#9;file:///Users/zheng/Documents/Web/React/portfolio_v2.0/src/App.js" />
+    <property name="SearchEverywhereHistoryKey" value="Messengerlis&#9;FILE&#9;file:///Users/zheng/Documents/Web/React/portfolio_v2.0/src/components/Messenger/MessengerList.js&#10;reducer&#9;FILE&#9;file:///Users/zheng/Documents/Web/React/portfolio_v2.0/src/reducers&#10;createmess&#9;null&#9;null&#10;index&#9;FILE&#9;file:///Users/zheng/Documents/Web/React/portfolio_v2.0/src/index.js&#10;messa&#9;FILE&#9;file:///Users/zheng/Documents/Web/React/portfolio_v2.0/src/reducers/messages.js&#10;actions/inde&#9;FILE&#9;file:///Users/zheng/Documents/Web/React/portfolio_v2.0/src/components/actions/index.js&#10;message&#9;FILE&#9;file:///Users/zheng/Documents/Web/React/portfolio_v2.0/src/reducers/messages.js&#10;reduce&#9;FILE&#9;file:///Users/zheng/Documents/Web/React/portfolio_v2.0/src/reducers&#10;action/inde&#9;FILE&#9;file:///Users/zheng/Documents/Web/React/portfolio_v2.0/src/components/actions/index.js&#10;inde&#9;FILE&#9;file:///Users/zheng/Documents/Web/React/portfolio_v2.0/src/index.js&#10;app&#9;FILE&#9;file:///Users/zheng/Documents/Web/React/portfolio_v2.0/src/App.js&#10;homepage&#9;FILE&#9;file:///Users/zheng/Documents/Web/React/portfolio_v2.0/src/containers/HomePageContainer.js&#10;favico&#9;FILE&#9;file:///Users/zheng/Documents/Web/React/portfolio_v2.0/public/favicon.ico&#10;intro&#9;FILE&#9;file:///Users/zheng/Documents/Web/React/portfolio_v2.0/src/containers/IntroContainer.js&#10;intr&#9;FILE&#9;file:///Users/zheng/Documents/Web/React/portfolio_v2.0/src/containers/IntroContainer.js&#10;bod&#9;FILE&#9;file:///Users/zheng/Documents/Web/React/portfolio_v2.0/src/components/Messenger/MessengerBody.js&#10;footer&#9;FILE&#9;file:///Users/zheng/Documents/Web/React/portfolio_v2.0/src/components/Messenger/MessengerFooter.js&#10;row&#9;FILE&#9;file:///Users/zheng/Documents/Web/React/portfolio_v2.0/src/components/Messenger/MessengerRow.js&#10;messen&#9;FILE&#9;file:///Users/zheng/Documents/Web/React/portfolio_v2.0/src/components/Messenger/MessengerBody.js&#10;in&#9;FILE&#9;file:///Users/zheng/Documents/Web/React/portfolio_v2.0/src/containers/IntroContainer.js&#10;INTROC&#9;FILE&#9;file:///Users/zheng/Documents/Web/React/portfolio_v2.0/src/containers/IntroContainer.js&#10;css&#9;FILE&#9;file:///Users/zheng/Documents/Web/React/portfolio_v2.0/src/helper/cssPolyfillHelper.js&#10;foot&#9;FILE&#9;file:///Users/zheng/Documents/Web/React/portfolio_v2.0/src/components/Messenger/MessengerFooter.js&#10;FOOTER&#9;FILE&#9;file:///Users/zheng/Documents/Web/React/portfolio_v2.0/src/components/Messenger/MessengerFooter.js&#10;header&#9;FILE&#9;file:///Users/zheng/Documents/Web/React/portfolio_v2.0/src/components/Messenger/MessengerHeader.js&#10;container&#9;null&#9;null&#10;containerRig&#9;null&#9;null&#10;fonts&#9;FILE&#9;file:///Users/zheng/Documents/Web/React/portfolio_v2.0/src/helper/fonts.js&#10;containerRigh&#9;null&#9;null&#10;home&#9;FILE&#9;file:///Users/zheng/Documents/Web/React/portfolio_v2.0/src/containers/HomePageContainer.js&#10;chat&#9;FILE&#9;file:///Users/zheng/Documents/Web/React/portfolio_v2.0/src/containers/ChatBoxContainer.js&#10;box&#9;FILE&#9;file:///Users/zheng/Documents/Web/React/portfolio_v2.0/src/components/Messenger/MessengerBox.js&#10;Home&#9;FILE&#9;file:///Users/zheng/Documents/Web/React/portfolio_v2.0/src/containers/HomePageContainer.js&#10;HomeP&#9;FILE&#9;file:///Users/zheng/Documents/Web/React/portfolio_v2.0/src/containers/HomePageContainer.js&#10;messengerfoot&#9;FILE&#9;file:///Users/zheng/Documents/Web/React/portfolio_v2.0/src/components/MessengerFooter.js&#10;chatbo&#9;FILE&#9;file:///Users/zheng/Documents/Web/React/portfolio_v2.0/src/containers/ChatBoxContainer.js&#10;fon&#9;FILE&#9;file:///Users/zheng/Documents/Web/React/portfolio_v2.0/src/helper/fonts.js&#10;cha&#9;FILE&#9;file:///Users/zheng/Documents/Web/React/portfolio_v2.0/src/containers/ChatBoxContainer.js&#10;int&#9;FILE&#9;file:///Users/zheng/Documents/Web/React/portfolio_v2.0/src/containers/IntroContainer.js&#10;homepa&#9;FILE&#9;file:///Users/zheng/Documents/Web/React/portfolio_v2.0/src/containers/HomePageContainer.js&#10;app.js&#9;FILE&#9;file:///Users/zheng/Documents/Web/React/portfolio_v2.0/src/App.js&#10;HomePa&#9;FILE&#9;file:///Users/zheng/Documents/Web/React/portfolio_v2.0/src/container/HomePage&#10;packa&#9;FILE&#9;file:///Users/zheng/Documents/Web/React/portfolio_v2.0/package.json&#10;CONTA&#9;FILE&#9;file:///Users/zheng/Documents/Web/React/portfolio_v2.0/src/container&#10;src&#9;FILE&#9;file:///Users/zheng/Documents/Web/React/portfolio_v2.0/src&#10;pub&#9;FILE&#9;file:///Users/zheng/Documents/Web/React/portfolio_v2.0/public&#10;App.js&#9;FILE&#9;file:///Users/zheng/Documents/Web/React/portfolio_v2.0/src/App.js" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="node.js.detected.package.prettier" value="true" />
     <property name="node.js.path.for.package.prettier" value="project" />
@@ -401,12 +398,12 @@
       <workItem from="1532909366874" duration="3911000" />
       <workItem from="1532973746441" duration="351000" />
       <workItem from="1532974112869" duration="30493000" />
-      <workItem from="1533075029547" duration="7277000" />
+      <workItem from="1533075029547" duration="11901000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="46817000" />
+    <option name="totallyTimeSpent" value="51441000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1680" y="23" width="1920" height="1057" extended-state="6" />
@@ -611,13 +608,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/package.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="21" selection-start-line="21" selection-end-line="21" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/App.css" />
     <entry file="file://$PROJECT_DIR$/src/containers/HomePage/index.css" />
     <entry file="file://$PROJECT_DIR$/src/helper/fonts.js">
@@ -662,16 +652,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/containers/HomePageContainer.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="8" lean-forward="true" selection-start-line="8" selection-end-line="8" />
-          <folding>
-            <element signature="e#0#26#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/App.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="170">
@@ -692,56 +672,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/Messenger/MessengerFooter.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
-          <caret line="20" column="21" lean-forward="true" selection-start-line="20" selection-start-column="21" selection-end-line="20" selection-end-column="21" />
-          <folding>
-            <element signature="e#0#26#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/Messenger/MessengerHeader.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="12" lean-forward="true" selection-start-line="12" selection-end-line="12" />
-          <folding>
-            <element signature="e#0#26#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/api/messageApi.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="19" column="19" lean-forward="true" selection-start-line="19" selection-start-column="19" selection-end-line="19" selection-end-column="19" />
-          <folding>
-            <element signature="e#0#26#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/actions/messages.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
-          <folding>
-            <element signature="e#0#29#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/store/configureStore.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="15" column="22" selection-start-line="15" selection-start-column="22" selection-end-line="15" selection-end-column="22" />
-          <folding>
-            <element signature="e#0#36#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/reducers/index.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="85">
@@ -752,29 +682,12 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/reducers/pendingResponse.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="14" lean-forward="true" selection-start-line="14" selection-end-line="14" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/containers/IntroContainer.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="182">
           <caret line="138" column="36" selection-start-line="138" selection-start-column="36" selection-end-line="138" selection-end-column="36" />
           <folding>
             <element signature="e#0#26#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/reducers/messages.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="16" column="9" lean-forward="true" selection-start-line="16" selection-start-column="9" selection-end-line="16" selection-end-column="9" />
-          <folding>
-            <element signature="e#0#92#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -789,30 +702,27 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/Messenger/MessengerRow.js">
+    <entry file="file://$PROJECT_DIR$/src/static/main.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="11" column="6" lean-forward="true" selection-start-line="11" selection-start-column="6" selection-end-line="16" selection-end-column="11" />
-          <folding>
-            <element signature="e#0#26#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="272">
+          <caret line="88" lean-forward="true" selection-start-line="88" selection-end-line="88" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/containers/ChatBoxContainer.js">
+    <entry file="file://$PROJECT_DIR$/src/reducers/pendingResponse.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="247">
-          <caret line="45" column="39" lean-forward="true" selection-start-line="45" selection-start-column="39" selection-end-line="45" selection-end-column="39" />
-          <folding>
-            <element signature="e#0#26#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="238">
+          <caret line="14" lean-forward="true" selection-start-line="14" selection-end-line="14" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/helper/settings.js">
+    <entry file="file://$PROJECT_DIR$/src/store/configureStore.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="3" lean-forward="true" selection-start-line="3" selection-end-line="3" />
+        <state relative-caret-position="408">
+          <caret line="24" column="4" lean-forward="true" selection-start-line="24" selection-start-column="4" selection-end-line="24" selection-end-column="4" />
+          <folding>
+            <element signature="e#0#53#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -823,10 +733,27 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/static/main.css">
+    <entry file="file://$PROJECT_DIR$/src/helper/settings.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="88" lean-forward="true" selection-start-line="88" selection-end-line="88" />
+        <state relative-caret-position="51">
+          <caret line="3" lean-forward="true" selection-start-line="3" selection-end-line="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/package.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="425">
+          <caret line="26" column="25" lean-forward="true" selection-start-line="26" selection-start-column="25" selection-end-line="26" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/Messenger/MessengerRow.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="340">
+          <caret line="20" lean-forward="true" selection-start-line="20" selection-end-line="20" />
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -837,10 +764,77 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/containers/HomePageContainer.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="8" lean-forward="true" selection-start-line="8" selection-end-line="8" />
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/api/messageApi.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="6" column="50" selection-start-line="6" selection-start-column="50" selection-end-line="6" selection-end-column="50" />
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/reducers/messages.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="15" column="37" lean-forward="true" selection-start-line="15" selection-start-column="37" selection-end-line="15" selection-end-column="37" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/containers/ChatBoxContainer.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="986">
+          <caret line="58" column="28" selection-start-line="58" selection-start-column="28" selection-end-line="58" selection-end-column="28" />
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/actions/messages.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="18" column="14" lean-forward="true" selection-start-line="18" selection-start-column="14" selection-end-line="18" selection-end-column="14" />
+          <folding>
+            <element signature="e#0#29#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/Messenger/MessengerFooter.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="340">
+          <caret line="20" column="21" lean-forward="true" selection-start-line="20" selection-start-column="21" selection-end-line="20" selection-end-column="21" />
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/Messenger/MessengerHeader.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="15" column="22" lean-forward="true" selection-start-line="15" selection-start-column="22" selection-end-line="15" selection-end-column="22" />
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/components/Messenger/MessengerList.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="333">
-          <caret line="31" column="34" lean-forward="true" selection-start-line="31" selection-start-column="34" selection-end-line="31" selection-end-column="34" />
+        <state relative-caret-position="255">
+          <caret line="15" selection-start-line="15" selection-end-line="15" />
           <folding>
             <element signature="e#0#26#0" expanded="true" />
           </folding>

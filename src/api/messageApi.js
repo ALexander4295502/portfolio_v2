@@ -2,22 +2,18 @@ import axios from "axios";
 import { isDev } from "../helper/settings";
 
 const messageApi = axios.create({
-  baseURL: isDev() ? "localhost:4000" : "localhost:4000",
+  //FUCK CORS!!!!!
+  baseURL: isDev()
+    ? "https://nodejs-dialogflow-suctxtwrxc.now.sh"
+    : "https://nodejs-dialogflow-suctxtwrxc.now.sh",
   timeout: 1000,
   headers: {
-    "Content-type": "application/json"
+    "Content-type": "application/json",
   }
 });
 
 export function sendMessage(content) {
-  messageApi
-    .post("/", {
-      content: content
-    })
-    .then(response => {
-      console.log("RESPONSE: ", response);
-    })
-    .catch(err => {
-      console.error("ERR: ", err);
-    });
+  return messageApi.post("", {
+    content: content
+  });
 }

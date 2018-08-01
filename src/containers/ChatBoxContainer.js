@@ -9,11 +9,11 @@ import MessengerBox from "../components/Messenger/MessengerBox";
 
 export class ChatBoxContainer extends React.PureComponent {
   createMessage = (content, fromUser) => {
-    this.props.actions.createMessages(content, fromUser);
+    this.props.messageActions.createMessages(content, fromUser);
   };
 
   clearMessages = () => {
-    this.props.actions.clearMessages();
+    this.props.messageActions.clearMessages();
   };
 
   render() {
@@ -42,7 +42,7 @@ export class ChatBoxContainer extends React.PureComponent {
 }
 
 ChatBoxContainer.propTypes = {
-  actions: PropTypes.object.isRequired,
+  messageActions: PropTypes.object.isRequired,
   messages: PropTypes.array.isRequired,
   pendingResponseNum: PropTypes.number.isRequired
 };
@@ -56,7 +56,7 @@ function mapStateToProps(state, ownProps) {
 
 function mapDispatchToProps(dispatch) {
   return {
-    actions: bindActionCreators(MessagesActions, dispatch)
+    messageActions: bindActionCreators(MessagesActions, dispatch)
   };
 }
 

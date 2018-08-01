@@ -1,6 +1,7 @@
-import { createStore } from "redux";
+import { createStore, applyMiddleware } from "redux";
 import moment from "moment";
 import uuidV4 from "uuid/v4";
+import thunkMiddleware from "redux-thunk";
 
 import { rootReducer } from "../reducers";
 
@@ -17,5 +18,9 @@ const preloadedState = {
 };
 
 export function configureStore() {
-  return createStore(rootReducer, preloadedState);
+  return createStore(
+    rootReducer,
+    preloadedState,
+    applyMiddleware(thunkMiddleware)
+  );
 }

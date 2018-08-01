@@ -6,6 +6,17 @@ import MessengerRow from "./MessengerRow";
 import MessengerPendingIndicator from "./MessengerPendingIndicator";
 
 export default class MessengerList extends React.PureComponent {
+  constructor() {
+    super();
+    this.lastListItem = React.createRef();
+  }
+
+  componentDidUpdate() {
+    if (this.lastListItem) {
+      this.lastListItem.scrollIntoView({ behavior: "smooth" });
+    }
+  }
+
   render() {
     return (
       <MatchQuery minWidth={1000}>
@@ -18,7 +29,7 @@ export default class MessengerList extends React.PureComponent {
                   height: (match ? 30 : 20) + "rem"
                 }}
               >
-                <ul style={styles.messagesList}>
+                <ul style={styles.messagesList} ref={this.messageList}>
                   {this.props.messages.map(message => {
                     return (
                       <MessengerRow
@@ -31,7 +42,14 @@ export default class MessengerList extends React.PureComponent {
                   })}
                   {this.props.pendingResponseNum ? (
                     <MessengerPendingIndicator />
-                  ) : null}
+                  ) : (
+                    <div
+                      style={{ float: "left", clear: "both" }}
+                      ref={el => {
+                        this.lastListItem = el;
+                      }}
+                    />
+                  )}
                 </ul>
               </div>
             </div>
