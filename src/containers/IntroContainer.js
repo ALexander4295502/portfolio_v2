@@ -130,7 +130,7 @@ export default class IntroContainer extends React.PureComponent {
                     textAlign: match ? "right" : "center"
                   }}
                 >
-                  Have questions? I'm happy to help{" "}
+                  Any questions? Just ask 'me'{" "}
                   <span role={"img"} aria-label={"hand"}>
                     {match ? "👉" : "👇"}
                   </span>
@@ -159,7 +159,8 @@ const styles = {
     overflow: "hidden",
     margin: "auto",
     marginRight: 0,
-    display: "block"
+    display: "block",
+    fontWeight: "bold"
   },
   scrollImageContainer: {
     overflow: "hidden",
@@ -172,7 +173,8 @@ const styles = {
     display: "inline",
     color: "#F1FCEF",
     margin: 0,
-    marginLeft: 0
+    marginLeft: 0,
+    fontWeight: "bold"
   },
   scrollTextList: {
     marginTop: 0,

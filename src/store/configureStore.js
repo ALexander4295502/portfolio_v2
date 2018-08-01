@@ -9,7 +9,7 @@ const preloadedState = {
   messages: [
     {
       fromUser: false,
-      content: "Hello, I am Zheng's bot. Nice to see you.",
+      content: "Hello, I'm Zheng. Nice to see you.🤓",
       timestamp: moment().toISOString(),
       id: uuidV4()
     }

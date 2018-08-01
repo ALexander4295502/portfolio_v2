@@ -9,6 +9,12 @@ export default class MessengerFooter extends React.PureComponent {
     };
   }
 
+  keyPressHandler = e => {
+    if (e.which === 13) {
+      this.submitHandler();
+    }
+  };
+
   handleInput = e => {
     this.setState({
       value: e.target.value
@@ -33,6 +39,7 @@ export default class MessengerFooter extends React.PureComponent {
           className={"messenger-input"}
           value={this.state.value}
           onChange={this.handleInput}
+          onKeyPress={this.keyPressHandler}
         />
         <button
           style={styles.submit}
