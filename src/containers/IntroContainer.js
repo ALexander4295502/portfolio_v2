@@ -22,12 +22,6 @@ export default class IntroContainer extends React.PureComponent {
                 alignItems: match ? "flex-end" : "center"
               }}
             >
-              <link
-                rel="stylesheet"
-                href="https://use.fontawesome.com/releases/v5.2.0/css/all.css"
-                integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ"
-                crossOrigin="anonymous"
-              />
               <div style={styles.titleContainer}>
                 <h1
                   style={{

@@ -25,6 +25,12 @@ export default class HomePage extends React.PureComponent {
                 padding: match ? "3rem 0 4rem" : "1rem 0 4rem"
               }}
             >
+              <link
+                rel="stylesheet"
+                href="https://use.fontawesome.com/releases/v5.2.0/css/all.css"
+                integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ"
+                crossOrigin="anonymous"
+              />
               <div
                 style={{
                   ...styles.container,
