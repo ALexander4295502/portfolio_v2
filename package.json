@@ -31,7 +31,10 @@
     "@types/react": "^16.4.7",
     "prettier": "^1.14.0"
   },
-  "env": {
-    "NODE_ENV": "production"
+  "now": {
+    "env": {
+      "NODE_ENV": "production"
+    },
+    "alias": "hi.zheng.town"
   }
 }
