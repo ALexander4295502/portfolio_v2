@@ -6,8 +6,13 @@ import { PropTypes } from "prop-types";
 
 import * as MessagesActions from "../actions/messages";
 import MessengerBox from "../components/Messenger/MessengerBox";
+import SessionManager from "../helper/session";
 
 export class ChatBoxContainer extends React.PureComponent {
+  componentDidMount() {
+    SessionManager.createSession();
+  }
+
   createMessage = (content, fromUser) => {
     this.props.messageActions.createMessages(content, fromUser);
   };
