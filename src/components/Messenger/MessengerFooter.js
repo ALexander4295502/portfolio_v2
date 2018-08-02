@@ -34,7 +34,7 @@ export default class MessengerFooter extends React.PureComponent {
     return (
       <div style={styles.container} className={"messenger-footer"}>
         <input
-          placeholder={"Enter text here"}
+          placeholder={"Say whatever you want : )"}
           style={styles.input}
           className={"messenger-input"}
           value={this.state.value}

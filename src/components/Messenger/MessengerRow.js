@@ -22,6 +22,9 @@ export default class MessengerRow extends React.PureComponent {
                 <a href={props.href} target="_blank">
                   {props.children}
                 </a>
+              ),
+              paragraph: props => (
+                <p style={{margin: 0}}>{props.children}</p>
               )
             }}
           />
@@ -68,6 +71,6 @@ const styles = {
   },
   content: {
     fontSize: 0.85 + "rem",
-    marginTop: 1 + "rem"
+    marginTop: 0.5 + "rem"
   }
 };
