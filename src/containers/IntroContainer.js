@@ -54,7 +54,7 @@ export default class IntroContainer extends React.PureComponent {
                   <ul
                     style={{
                       ...styles.scrollTextList,
-                      paddingLeft: match ? 120 : 60
+                      paddingLeft: match ? 120 : 65
                     }}
                   >
                     {roleNames.map((roleName, id) => {
