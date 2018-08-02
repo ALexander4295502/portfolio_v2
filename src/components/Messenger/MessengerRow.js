@@ -12,7 +12,7 @@ export default class MessengerRow extends React.PureComponent {
     return (
       <li style={{ ...styles.container, ...styleModifier }}>
         <div style={styles.time}>
-          {moment(this.props.timestamp).format("h:mm:ss a")}
+          {moment(this.props.timestamp).format("h:mm:ss A")}
         </div>
         <div style={styles.content}>
           <ReactMarkdown
