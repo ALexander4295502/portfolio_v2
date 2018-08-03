@@ -5,7 +5,6 @@ import SessionManager from "../helper/session";
 
 const messageApi = axios.create({
   baseURL: "https://bot.zheng.town",
-  timeout: 5000,
   headers: {
     "Content-type": "application/json"
   }
