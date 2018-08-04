@@ -1,5 +1,6 @@
 import React from "react";
 import MediaQuery from "react-responsive";
+import ReactGA from 'react-ga';
 
 import IntroContainer from "./IntroContainer";
 import { injectGoogleFonts } from "../helper/fonts";
@@ -8,6 +9,10 @@ import { injectAnimationFrames } from "../helper/animationKeyframes";
 import "../static/main.css";
 
 export default class HomePage extends React.PureComponent {
+  componentDidMount() {
+    ReactGA.initialize('UA-123347555-1')
+  }
+
   injectHelper() {
     injectGoogleFonts();
     injectAnimationFrames();
