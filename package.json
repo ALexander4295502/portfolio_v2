@@ -35,6 +35,16 @@
     "env": {
       "NODE_ENV": "production"
     },
-    "alias": "hi.zheng.town"
+    "alias": "hi.zheng.town",
+    "scale": {
+      "sfo1": {
+        "min": 1,
+        "max": "auto"
+      },
+      "bru1": {
+        "min": 1,
+        "max": "auto"
+      }
+    }
   }
 }

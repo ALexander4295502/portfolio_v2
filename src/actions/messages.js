@@ -13,8 +13,13 @@ export const createMessages = (content, fromUser) => {
       .then(result => {
         dispatch(createBotResponse(result.data.response));
       })
-      .catch( _ => {
-        dispatch(createBotResponse('Sorry, something bad happened and I am offline temporarily.🤐'))
+      .catch(error => {
+        console.warn(error);
+        dispatch(
+          createBotResponse(
+            "Sorry, something bad happened and I am offline temporarily.🤐"
+          )
+        );
       });
     dispatch({
       type: CREATE_MESSAGES,
