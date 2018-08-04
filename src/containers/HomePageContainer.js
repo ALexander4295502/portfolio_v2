@@ -8,9 +8,11 @@ import ChatBoxContainer from "./ChatBoxContainer";
 import { injectAnimationFrames } from "../helper/animationKeyframes";
 import "../static/main.css";
 
+ReactGA.initialize("UA-123347555-1");
+
 export default class HomePage extends React.PureComponent {
   componentDidMount() {
-    ReactGA.initialize("UA-123347555-1");
+    ReactGA.pageview(window.location.pathname);
   }
 
   injectHelper() {
