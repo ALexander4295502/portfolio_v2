@@ -1,4 +1,5 @@
 import React from "react";
+import ReactDOM from "react-dom";
 import PropTypes from "prop-types";
 import ReactAudio from "react-audioplayer";
 import { MESSAGE_PAYLOAD_TYPE_AUDIO } from "../../actions/messages";
@@ -10,6 +11,15 @@ export default class MessengerPayload extends React.PureComponent {
       audioHeight: 0,
       audioWidth: 0
     };
+    this.audioPlayer = React.createRef();
+  }
+
+  componentWillUnmount() {
+    if (this.audioPlayer) {
+      ReactDOM.findDOMNode(this.audioPlayer).dispatchEvent(
+        new Event("audio-pause")
+      );
+    }
   }
 
   updateAudioSize = element => {
@@ -31,6 +41,9 @@ export default class MessengerPayload extends React.PureComponent {
           style={styles.container}
         >
           <ReactAudio
+            ref={ref => {
+              this.audioPlayer = ref;
+            }}
             height={this.state.audioHeight}
             width={this.state.audioWidth}
             playlist={this.props.payload.value.playlist}
@@ -54,6 +67,6 @@ const styles = {
   container: {
     marginTop: 1 + "rem",
     backgroundColor: "white",
-    boxShadow: 'rgba(0, 0, 0, 0.28) 0px 2px 6px'
+    boxShadow: "rgba(0, 0, 0, 0.28) 0px 2px 6px"
   }
 };

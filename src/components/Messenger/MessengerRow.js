@@ -20,18 +20,27 @@ export default class MessengerRow extends React.PureComponent {
             source={this.props.content}
             renderers={{
               link: props => (
-                <a href={props.href} target="_blank" style={{
-                  textDecoration: 'none'
-                }}>
+                <a
+                  href={props.href}
+                  target="_blank"
+                  style={{
+                    textDecoration: "none"
+                  }}
+                >
                   {props.children}
                 </a>
               ),
-              paragraph: props => (
-                <p style={{margin: 0}}>{props.children}</p>
+              paragraph: props => <p style={{ margin: 0 }}>{props.children}</p>,
+              blockquote: props => (
+                <blockquote style={{ margin: 0, marginTop: 10, marginBottom: 10 }}>
+                  {props.children}
+                </blockquote>
               )
             }}
           />
-          {this.props.payload ? <MessengerPayload payload={this.props.payload}/> : null}
+          {this.props.payload ? (
+            <MessengerPayload payload={this.props.payload} />
+          ) : null}
         </div>
       </li>
     );
@@ -77,7 +86,7 @@ const styles = {
   content: {
     fontSize: 0.85 + "rem",
     marginTop: 0.5 + "rem",
-    display: 'flex',
-    flexDirection: 'column',
+    display: "flex",
+    flexDirection: "column"
   }
 };
