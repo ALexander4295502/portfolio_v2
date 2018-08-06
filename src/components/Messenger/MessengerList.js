@@ -43,14 +43,13 @@ export default class MessengerList extends React.PureComponent {
                   })}
                   {this.props.pendingResponseNum ? (
                     <MessengerPendingIndicator />
-                  ) : (
-                    <div
-                      style={{ float: "left", clear: "both" }}
-                      ref={el => {
-                        this.lastListItem = el;
-                      }}
-                    />
-                  )}
+                  ) : null}
+                  <div
+                    style={{ float: "left", clear: "both" }}
+                    ref={el => {
+                      this.lastListItem = el;
+                    }}
+                  />
                 </ul>
               </div>
             </div>
