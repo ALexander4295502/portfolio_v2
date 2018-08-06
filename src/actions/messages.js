@@ -7,11 +7,13 @@ export const CREATE_MESSAGES = "CREATE_MESSAGES";
 export const CLEAR_MESSAGES = "CLEAR_MESSAGES";
 export const CREATE_BOT_RESPONSE = "CREATE_BOT_RESPONSE";
 
+export const MESSAGE_PAYLOAD_TYPE_AUDIO = "MESSAGE_PAYLOAD_TYPE_AUDIO";
+
 export const createMessages = (content, fromUser) => {
   return (dispatch, getState) => {
     sendMessage(content)
       .then(result => {
-        dispatch(createBotResponse(result.data.response));
+        dispatch(createBotResponse(result.data.response, result.data.payload));
       })
       .catch(error => {
         console.warn(error);
@@ -28,12 +30,13 @@ export const createMessages = (content, fromUser) => {
   };
 };
 
-function createLocalMessage(content, fromUser) {
+function createLocalMessage(content, fromUser, payload) {
   return {
     id: uuidV4(),
     fromUser,
     content,
-    timestamp: moment().toISOString()
+    timestamp: moment().toISOString(),
+    payload: payload
   };
 }
 
@@ -41,7 +44,7 @@ export const clearMessages = () => ({
   type: CLEAR_MESSAGES
 });
 
-export const createBotResponse = response => ({
+export const createBotResponse = (response, payload) => ({
   type: CREATE_BOT_RESPONSE,
-  message: createLocalMessage(response, false)
+  message: createLocalMessage(response, false, payload)
 });

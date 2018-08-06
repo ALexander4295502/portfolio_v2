@@ -2,6 +2,7 @@ import React from "react";
 import moment from "moment";
 import PropTypes from "prop-types";
 import ReactMarkdown from "react-markdown";
+import MessengerPayload from "./MessengerPayload";
 
 export default class MessengerRow extends React.PureComponent {
   render() {
@@ -19,7 +20,9 @@ export default class MessengerRow extends React.PureComponent {
             source={this.props.content}
             renderers={{
               link: props => (
-                <a href={props.href} target="_blank">
+                <a href={props.href} target="_blank" style={{
+                  textDecoration: 'none'
+                }}>
                   {props.children}
                 </a>
               ),
@@ -28,6 +31,7 @@ export default class MessengerRow extends React.PureComponent {
               )
             }}
           />
+          {this.props.payload ? <MessengerPayload payload={this.props.payload}/> : null}
         </div>
       </li>
     );
@@ -35,9 +39,10 @@ export default class MessengerRow extends React.PureComponent {
 }
 
 MessengerRow.propTypes = {
-  fromUser: PropTypes.bool,
-  content: PropTypes.string,
-  timestamp: PropTypes.string
+  fromUser: PropTypes.bool.isRequired,
+  content: PropTypes.string.isRequired,
+  timestamp: PropTypes.string.isRequired,
+  payload: PropTypes.object
 };
 
 const styles = {
@@ -71,6 +76,8 @@ const styles = {
   },
   content: {
     fontSize: 0.85 + "rem",
-    marginTop: 0.5 + "rem"
+    marginTop: 0.5 + "rem",
+    display: 'flex',
+    flexDirection: 'column',
   }
 };

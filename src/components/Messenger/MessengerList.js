@@ -29,7 +29,7 @@ export default class MessengerList extends React.PureComponent {
                   height: (match ? 30 : 20) + "rem"
                 }}
               >
-                <ul style={styles.messagesList} ref={this.messageList}>
+                <ul style={styles.messagesList}>
                   {this.props.messages.map(message => {
                     return (
                       <MessengerRow
@@ -37,6 +37,7 @@ export default class MessengerList extends React.PureComponent {
                         timestamp={message.timestamp}
                         content={message.content}
                         fromUser={message.fromUser}
+                        payload={message.payload}
                       />
                     );
                   })}
