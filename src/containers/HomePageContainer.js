@@ -33,20 +33,19 @@ class HomePage extends React.PureComponent {
   render() {
     this.injectHelper();
     return (
-      <SidebarContainer
-        styles={{
-          sidebar: {
-            maxWidth: "60%"
-          }
-        }}
-        sidebar={<LogSidebarComponent />}
-        open={this.props.sidebarOpen}
-        onSetOpen={this.toggleSidebar}
-        pullRight={true}
-      >
-        <MediaQuery minWidth={1000}>
-          {match => {
-            return (
+      <MediaQuery minWidth={1000}>
+        {match => {
+          return (
+            <SidebarContainer
+              styles={{
+                sidebar: {
+                  maxWidth: match ? "60%" : "75%"
+                }
+              }}
+              sidebar={<LogSidebarComponent />}
+              open={this.props.sidebarOpen}
+              onSetOpen={this.toggleSidebar}
+            >
               <div
                 style={{
                   ...styles.background,
@@ -69,10 +68,10 @@ class HomePage extends React.PureComponent {
                   <ChatBoxContainer toggleSidebar={this.toggleSidebar} />
                 </div>
               </div>
-            );
-          }}
-        </MediaQuery>
-      </SidebarContainer>
+            </SidebarContainer>
+          );
+        }}
+      </MediaQuery>
     );
   }
 }
