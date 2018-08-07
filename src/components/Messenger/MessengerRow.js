@@ -1,48 +1,67 @@
 import React from "react";
 import moment from "moment";
 import PropTypes from "prop-types";
+import MediaQuery from "react-responsive";
 import ReactMarkdown from "react-markdown";
 import MessengerPayload from "./MessengerPayload";
 
 export default class MessengerRow extends React.PureComponent {
   render() {
-    const styleModifier = this.props.fromUser
+    const styleModifierBySource = this.props.fromUser
       ? styles.fromUserContainerModifier
       : styles.fromRobotContainerModifier;
 
     return (
-      <li style={{ ...styles.container, ...styleModifier }}>
-        <div style={styles.time}>
-          {moment(this.props.timestamp).format("h:mm:ss A")}
-        </div>
-        <div style={styles.content}>
-          <ReactMarkdown
-            source={this.props.content}
-            renderers={{
-              link: props => (
-                <a
-                  href={props.href}
-                  target="_blank"
-                  style={{
-                    textDecoration: "none"
+      <MediaQuery minWidth={1000}>
+        {match => {
+          const styleModifierByPayload =
+            !match && this.props.payload ? { maxWidth: undefined } : null;
+          return (
+            <li
+              style={{
+                ...styles.container,
+                ...styleModifierBySource,
+                ...styleModifierByPayload
+              }}
+            >
+              <div style={styles.time}>
+                {moment(this.props.timestamp).format("h:mm:ss A")}
+              </div>
+              <div style={styles.content}>
+                <ReactMarkdown
+                  source={this.props.content}
+                  renderers={{
+                    link: props => (
+                      <a
+                        href={props.href}
+                        target="_blank"
+                        style={{
+                          textDecoration: "none"
+                        }}
+                      >
+                        {props.children}
+                      </a>
+                    ),
+                    paragraph: props => (
+                      <p style={{ margin: 0 }}>{props.children}</p>
+                    ),
+                    blockquote: props => (
+                      <blockquote
+                        style={{ margin: 0, marginTop: 10, marginBottom: 10 }}
+                      >
+                        {props.children}
+                      </blockquote>
+                    )
                   }}
-                >
-                  {props.children}
-                </a>
-              ),
-              paragraph: props => <p style={{ margin: 0 }}>{props.children}</p>,
-              blockquote: props => (
-                <blockquote style={{ margin: 0, marginTop: 10, marginBottom: 10 }}>
-                  {props.children}
-                </blockquote>
-              )
-            }}
-          />
-          {this.props.payload ? (
-            <MessengerPayload payload={this.props.payload} />
-          ) : null}
-        </div>
-      </li>
+                />
+                {this.props.payload ? (
+                  <MessengerPayload payload={this.props.payload} />
+                ) : null}
+              </div>
+            </li>
+          );
+        }}
+      </MediaQuery>
     );
   }
 }

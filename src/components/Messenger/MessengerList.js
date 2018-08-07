@@ -1,5 +1,5 @@
 import React from "react";
-import MatchQuery from "react-responsive";
+import MediaQuery from "react-responsive";
 import PropTypes from "prop-types";
 
 import MessengerRow from "./MessengerRow";
@@ -19,7 +19,7 @@ export default class MessengerList extends React.PureComponent {
 
   render() {
     return (
-      <MatchQuery minWidth={1000}>
+      <MediaQuery minWidth={1000}>
         {match => {
           return (
             <div style={styles.container} className={"messenger-body"}>
@@ -55,7 +55,7 @@ export default class MessengerList extends React.PureComponent {
             </div>
           );
         }}
-      </MatchQuery>
+      </MediaQuery>
     );
   }
 }
