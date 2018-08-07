@@ -82,6 +82,7 @@ const styles = {
     padding: 1 + "rem",
     listStyleType: "none",
     display: "flex",
-    flexDirection: "column"
+    flexDirection: "column",
+    overflowX: "hidden"
   }
 };
