@@ -11,10 +11,11 @@ const preloadedState = {
       fromUser: false,
       content: "Hello, I'm Zheng. Nice to see you.🤓",
       timestamp: moment().toISOString(),
-      id: uuidV4(),
+      id: uuidV4()
     }
   ],
-  pendingResponseNum: 0
+  pendingResponseNum: 0,
+  sidebarOpen: false
 };
 
 export function configureStore() {

@@ -6,9 +6,14 @@ export default class MessengerHeader extends React.PureComponent {
     return (
       <div style={styles.container}>
         <i
-          style={styles.clearButtonIcon}
+          style={styles.buttonIcon}
           onClick={this.props.clearMessages}
           className="far fa-trash-alt"
+        />
+        <i
+          style={styles.buttonIcon}
+          onClick={this.props.toggleSidebar}
+          className="far fa-question-circle"
         />
       </div>
     );
@@ -16,7 +21,8 @@ export default class MessengerHeader extends React.PureComponent {
 }
 
 MessengerHeader.propsType = {
-  clearMessages: PropTypes.func.isRequired
+  clearMessages: PropTypes.func.isRequired,
+  toggleSidebar: PropTypes.func.isRequired
 };
 
 const styles = {
@@ -32,10 +38,11 @@ const styles = {
     WebkitAnimation: "down 0.3s cubic-bezier(0.36, -0.04, 0.15, 1.64) forwards",
     animation: "down 0.3s cubic-bezier(0.36, -0.04, 0.15, 1.64) forwards"
   },
-  clearButtonIcon: {
+  buttonIcon: {
     color: "#F1FCEF",
     WebkitAnimation: "down 0.3s cubic-bezier(0.36, -0.04, 0.15, 1.64) forwards",
     animation: "down 0.3s cubic-bezier(0.36, -0.04, 0.15, 1.64) forwards",
-    cursor: "pointer"
+    cursor: "pointer",
+    marginLeft: 1 + "rem"
   }
 };

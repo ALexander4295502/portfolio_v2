@@ -9,7 +9,10 @@ export default class MessengerBox extends React.PureComponent {
   render() {
     return (
       <div style={styles.container}>
-        <MessengerHeader clearMessages={this.props.clearMessages} />
+        <MessengerHeader
+          clearMessages={this.props.clearMessages}
+          toggleSidebar={this.props.toggleSidebar}
+        />
         <MessengerList
           messages={this.props.messages}
           pendingResponseNum={this.props.pendingResponseNum}
@@ -24,7 +27,8 @@ MessengerBox.propsType = {
   messages: PropTypes.array.isRequired,
   createMessage: PropTypes.func.isRequired,
   clearMessages: PropTypes.func.isRequired,
-  pendingResponseNum: PropTypes.number.isRequired
+  pendingResponseNum: PropTypes.number.isRequired,
+  toggleSidebar: PropTypes.func.isRequired
 };
 
 const styles = {

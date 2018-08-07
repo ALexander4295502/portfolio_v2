@@ -37,6 +37,7 @@ export class ChatBoxContainer extends React.PureComponent {
                 pendingResponseNum={this.props.pendingResponseNum}
                 createMessage={this.createMessage}
                 clearMessages={this.clearMessages}
+                toggleSidebar={this.props.toggleSidebar}
               />
             </div>
           );
@@ -49,7 +50,8 @@ export class ChatBoxContainer extends React.PureComponent {
 ChatBoxContainer.propTypes = {
   messageActions: PropTypes.object.isRequired,
   messages: PropTypes.array.isRequired,
-  pendingResponseNum: PropTypes.number.isRequired
+  pendingResponseNum: PropTypes.number.isRequired,
+  toggleSidebar: PropTypes.func.isRequired
 };
 
 function mapStateToProps(state, ownProps) {

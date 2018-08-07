@@ -1,0 +1,36 @@
+{
+  "title": "Some hints",
+  "instructions": [
+    {
+      "title": "Acquaintance 👤",
+      "messages": [
+        "Introduce yourself.",
+        "Can I see your resume?",
+        "What have you done?"
+      ]
+    },
+    {
+      "title": "Date & Time ⏱️",
+      "messages": ["What time is it now?", "What day was yesterday?"]
+    },
+    {
+      "title": "Normal Question ❓",
+      "messages": [
+        "Can you find a place for dinner tonight?",
+        "Do you know where I can see the Mission Impossible"
+      ]
+    },
+    {
+      "title": "Music 🎵",
+      "messages": ["Can you show me some songs?", "Play song Rain."]
+    },
+    {
+      "title": "Small Talk 💬",
+      "messages": ["Are you just a bot?", "Would you like to marry me?"]
+    },
+    {
+      "title": "Joke 😜",
+      "messages": ["Tell me a joke.", "Any good jokes?"]
+    }
+  ]
+}
