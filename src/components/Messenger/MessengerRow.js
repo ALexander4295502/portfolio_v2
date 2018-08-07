@@ -39,7 +39,13 @@ export default class MessengerRow extends React.PureComponent {
                           textDecoration: "none"
                         }}
                       >
-                        {props.children}
+                        {props.children[0] === "⬇️" ? (
+                          <i style={{
+                            color: 'white'
+                          }} className="fas fa-download" />
+                        ) : (
+                          props.children
+                        )}
                       </a>
                     ),
                     paragraph: props => (
