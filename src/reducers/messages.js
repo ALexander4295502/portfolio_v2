@@ -14,7 +14,7 @@ const messages = (state = [], action) => {
           fromUser: action.fromUser,
           content: action.content,
           timestamp: action.timestamp,
-          payload: action.payload,
+          payload: action.payload
         }
       ];
     case CLEAR_MESSAGES:

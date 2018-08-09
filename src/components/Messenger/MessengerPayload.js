@@ -1,8 +1,8 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import PropTypes from "prop-types";
-import ReactAudio from "react-audioplayer";
 import { MESSAGE_PAYLOAD_TYPE_AUDIO } from "../../actions/messages";
+import AudioPlayerComponent from "../AudioPlayer/AudioPlayerComponent";
 
 export default class MessengerPayload extends React.PureComponent {
   constructor() {
@@ -40,12 +40,8 @@ export default class MessengerPayload extends React.PureComponent {
           }}
           style={styles.container}
         >
-          <ReactAudio
-            ref={ref => {
-              this.audioPlayer = ref;
-            }}
-            height={this.state.audioHeight}
-            width={this.state.audioWidth}
+          <AudioPlayerComponent
+            reRenderHandler={this.props.reRenderHandler}
             playlist={this.props.payload.value.playlist}
           />
         </div>
@@ -60,7 +56,8 @@ MessengerPayload.propTypes = {
   payload: PropTypes.shape({
     type: PropTypes.string.isRequired,
     value: PropTypes.object.isRequired
-  }).isRequired
+  }).isRequired,
+  reRenderHandler: PropTypes.func
 };
 
 const styles = {

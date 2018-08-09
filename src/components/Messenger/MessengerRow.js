@@ -40,9 +40,12 @@ export default class MessengerRow extends React.PureComponent {
                         }}
                       >
                         {props.children[0] === "⬇️" ? (
-                          <i style={{
-                            color: 'white'
-                          }} className="fas fa-download" />
+                          <i
+                            style={{
+                              color: "white"
+                            }}
+                            className="fas fa-download"
+                          />
                         ) : (
                           props.children
                         )}
@@ -61,7 +64,10 @@ export default class MessengerRow extends React.PureComponent {
                   }}
                 />
                 {this.props.payload ? (
-                  <MessengerPayload payload={this.props.payload} />
+                  <MessengerPayload
+                    reRenderHandler={this.props.reRenderHandler}
+                    payload={this.props.payload}
+                  />
                 ) : null}
               </div>
             </li>
@@ -76,7 +82,8 @@ MessengerRow.propTypes = {
   fromUser: PropTypes.bool.isRequired,
   content: PropTypes.string.isRequired,
   timestamp: PropTypes.string.isRequired,
-  payload: PropTypes.object
+  payload: PropTypes.object,
+  reRenderHandler: PropTypes.func
 };
 
 const styles = {

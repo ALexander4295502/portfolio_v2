@@ -1,7 +1,7 @@
 import axios from "axios";
 import momentTimezone from "moment-timezone";
 
-import {isDev} from '../helper/settings'
+import { isDev } from "../helper/settings";
 import SessionManager from "../helper/session";
 
 const messageApi = axios.create({

@@ -58,6 +58,10 @@ class HomePage extends React.PureComponent {
                   integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ"
                   crossOrigin="anonymous"
                 />
+                <link
+                  href="https://fonts.googleapis.com/icon?family=Material+Icons"
+                  rel="stylesheet"
+                />
                 <div
                   style={{
                     ...styles.container,

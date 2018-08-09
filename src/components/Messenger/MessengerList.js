@@ -38,6 +38,11 @@ export default class MessengerList extends React.PureComponent {
                         content={message.content}
                         fromUser={message.fromUser}
                         payload={message.payload}
+                        reRenderHandler={() => {
+                          this.lastListItem.scrollIntoView({
+                            behavior: "smooth"
+                          });
+                        }}
                       />
                     );
                   })}

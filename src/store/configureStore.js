@@ -2,6 +2,7 @@ import { createStore, applyMiddleware } from "redux";
 import moment from "moment";
 import uuidV4 from "uuid/v4";
 import thunkMiddleware from "redux-thunk";
+import { MESSAGE_PAYLOAD_TYPE_AUDIO } from "../actions/messages";
 
 import { rootReducer } from "../reducers";
 

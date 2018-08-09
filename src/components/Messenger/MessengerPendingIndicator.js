@@ -1,7 +1,6 @@
 import React from "react";
 
 export default class MessengerPendingIndicator extends React.PureComponent {
-
   render() {
     return (
       <li style={styles.container}>

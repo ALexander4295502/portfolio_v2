@@ -81,7 +81,7 @@ class SidebarContainer extends Component {
     const isIos = /iPad|iPhone|iPod/.test(navigator ? navigator.userAgent : "");
     this.setState({
       dragSupported:
-      typeof window === "object" && "ontouchstart" in window && !isIos
+        typeof window === "object" && "ontouchstart" in window && !isIos
     });
     this.saveSidebarWidth();
   }
@@ -127,7 +127,7 @@ class SidebarContainer extends Component {
       if (
         (this.props.open &&
           touchWidth <
-          this.state.sidebarWidth - this.props.dragToggleDistance) ||
+            this.state.sidebarWidth - this.props.dragToggleDistance) ||
         (!this.props.open && touchWidth > this.props.dragToggleDistance)
       ) {
         this.props.onSetOpen(!this.props.open);
@@ -282,7 +282,7 @@ class SidebarContainer extends Component {
       } else {
         sidebarStyle.transform = `translateX(-${(1 - percentage) * 100}%)`;
         sidebarStyle.WebkitTransform = `translateX(-${(1 - percentage) *
-        100}%)`;
+          100}%)`;
       }
 
       // fade overlay to match distance of drag
