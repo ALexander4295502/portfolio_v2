@@ -96,6 +96,12 @@ export default class AudioPlayerComponent extends React.PureComponent {
               this.playlist[this.state.currentSongIndex].howl.seek()
             )
           });
+          if (
+            this.playlist[this.state.currentSongIndex].howl.playing() !==
+            this.state.playing
+          ) {
+            this.playlist[this.state.currentSongIndex].howl.play();
+          }
         }, 100);
       }
     );
@@ -236,11 +242,6 @@ export default class AudioPlayerComponent extends React.PureComponent {
                 ? "0:00"
                 : moment.duration(this.state.progress, "seconds").format()}
             </div>
-            <div className="time--total">
-              {!this.state.duration || this.state.duration === "0:00"
-                ? "0:00"
-                : moment.duration(this.state.duration, "seconds").format()}
-            </div>
             <div className="progress-bar" onClick={this.clickPressBarHandler}>
               <div
                 className="fill"
@@ -251,6 +252,11 @@ export default class AudioPlayerComponent extends React.PureComponent {
                       : (this.state.progress / this.state.duration) * 100) + "%"
                 }}
               />
+            </div>
+            <div className="time--total">
+              {!this.state.duration || this.state.duration === "0:00"
+                ? "0:00"
+                : moment.duration(this.state.duration, "seconds").format()}
             </div>
           </div>
           <div className="currently-playing">
