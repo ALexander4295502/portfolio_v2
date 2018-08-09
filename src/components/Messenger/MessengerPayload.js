@@ -64,6 +64,7 @@ const styles = {
   container: {
     marginTop: 1 + "rem",
     backgroundColor: "white",
-    boxShadow: "rgba(0, 0, 0, 0.28) 0px 2px 6px"
+    boxShadow: "rgba(0, 0, 0, 0.28) 0px 2px 6px",
+    borderRadius: 5
   }
 };
