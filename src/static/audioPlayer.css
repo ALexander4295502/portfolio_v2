@@ -53,12 +53,15 @@
 .currently-playing {
     text-align: center;
     margin-top: -3px;
+    display: flex;
+    justify-content: center;
 }
 
 .song-name, .artist-name {
     font-family: "Questrial", sans-serif;
     text-transform: uppercase;
     margin: 0;
+    max-width: 250px;
 }
 
 .song-name {
