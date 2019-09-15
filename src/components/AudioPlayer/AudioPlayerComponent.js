@@ -4,7 +4,8 @@ import moment from "moment";
 import momentDurationFormatSetup from "moment-duration-format";
 import { Howl, Howler } from "howler";
 
-import "../../static/audioPlayer.css";
+import "../../static/css/audioPlayer.css";
+
 import { float2Int, getRandomInt } from "../../helper/foundations";
 
 export default class AudioPlayerComponent extends React.PureComponent {

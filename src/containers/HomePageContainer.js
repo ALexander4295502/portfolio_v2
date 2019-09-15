@@ -5,7 +5,7 @@ import { connect } from "react-redux";
 import { bindActionCreators } from "redux";
 import ReactGA from "react-ga";
 
-import "../static/main.css";
+import "../static/css/main.css";
 
 import IntroContainer from "./IntroContainer";
 import ChatBoxContainer from "./ChatBoxContainer";

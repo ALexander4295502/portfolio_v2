@@ -1,6 +1,6 @@
 import React from "react";
 
-import logData from "../../static/log";
+import logData from "../../static/misc/log";
 
 export default class LogSidebarComponent extends React.PureComponent {
   render() {
