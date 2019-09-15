@@ -5,7 +5,7 @@ import { isDev } from "../helper/settings";
 import SessionManager from "../helper/session";
 
 const messageApi = axios.create({
-  baseURL: isDev() ? "http://localhost:4000" : "https://bot.zheng.town",
+  baseURL: isDev() ? "http://localhost:4000" : "https://api.zhengy.dev",
   headers: {
     "Content-type": "application/json"
   }

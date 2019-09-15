@@ -22,3 +22,6 @@ yarn-error.log*
 
 # Jetbrain
 .idea/
+
+#now
+now.json
