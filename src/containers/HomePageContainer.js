@@ -5,13 +5,12 @@ import { connect } from "react-redux";
 import { bindActionCreators } from "redux";
 import ReactGA from "react-ga";
 
+import "../static/main.css";
+
 import IntroContainer from "./IntroContainer";
-import { injectGoogleFonts } from "../helper/fonts";
 import ChatBoxContainer from "./ChatBoxContainer";
 import SidebarContainer from "./SidebarContainer";
 import LogSidebarComponent from "../components/LogSidebar/LogSidebarComponent";
-import { injectAnimationFrames } from "../helper/animationKeyframes";
-import "../static/main.css";
 import * as SidebarActions from "../actions/sidebar";
 
 ReactGA.initialize("UA-123347555-1");
@@ -21,17 +20,11 @@ class HomePage extends React.PureComponent {
     ReactGA.pageview(window.location.pathname);
   }
 
-  injectHelper() {
-    injectGoogleFonts();
-    injectAnimationFrames();
-  }
-
   toggleSidebar = () => {
     this.props.sidebarActions.toggleSidebar();
   };
 
   render() {
-    this.injectHelper();
     return (
       <MediaQuery minWidth={1000}>
         {match => {
