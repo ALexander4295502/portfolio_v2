@@ -33,21 +33,5 @@
   "devDependencies": {
     "@types/react": "^16.4.7",
     "prettier": "^1.14.0"
-  },
-  "now": {
-    "env": {
-      "NODE_ENV": "production"
-    },
-    "alias": "hi.zheng.town",
-    "scale": {
-      "sfo1": {
-        "min": 1,
-        "max": "auto"
-      },
-      "bru1": {
-        "min": 1,
-        "max": "auto"
-      }
-    }
   }
 }
