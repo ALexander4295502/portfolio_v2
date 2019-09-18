@@ -6,7 +6,7 @@ export default class IntroContainer extends React.PureComponent {
     const roleNames = ["coder", "gamer", "fan"];
 
     const iconNames = [
-      ["fab fa-js-square", "fab fa-python"],
+      ["fab fa-js-square", "fab fa-php", "fab fa-python"],
       ["fab fa-steam", "fab fa-nintendo-switch"],
       ["fas fa-swimmer", "fas fa-film"]
     ];
